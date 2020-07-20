@@ -34,3 +34,16 @@ of line.
 
 (later, todo) Forward kinematic calculation: given two lengths of line, find
 plotting point `P`.
+
+## Tests
+
+Diagram of test cases in test.txt. Values in the test are in
+agreement with 'Analyze, Length' measurements in the Rhino.
+
+![testsdiagram](tests.PNG "Tests Diagram")
+
+Test #3 is interesting in that it shows that the top of the spool is an
+arbitrary line length measurement starting point.
+The effect of the calculation is as if the length of the line
+not touching the spool is added, and the length of the line which
+would touch if wrapped around is subtracted.
