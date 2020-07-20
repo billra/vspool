@@ -9,12 +9,9 @@ def vspoolinverse(Cx,Cy,Px,Py,r):
 	m = atan2(Py - Cy,Px - Cx)
 	Tx = Cx + r * cos(m + b)
 	Ty = Cy + r * sin(m + b)
-	print('circle intersect point:', Tx,Ty)
-
 	n = atan2(Ty - Cy, Tx - Cx)
 	a = pi / 2 - n
 	c = a * r
-	print('circular section length:', c)
 	s = sqrt((Px - Tx) ** 2 + (Py - Ty) ** 2)
 	cs = c + s
 	return cs

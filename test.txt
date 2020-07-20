@@ -1,0 +1,36 @@
+Test vspool library
+
+Import:
+
+	>>> from vspool import *
+
+These numbers were verified by Rhino drawing of configuration.
+See tests.PNG
+
+Base Test:
+
+	>>> Cx,Cy = 0,4 # center of spool
+	>>> Px,Py = 7,-1 # point being plotted
+	>>> r = 3 # radius of spool
+	>>> cs = vspoolinverse(Cx,Cy,Px,Py,r)
+	>>> print(cs)
+	10.9916946...
+
+The same, but abbreviated:
+
+	>>> print(vspoolinverse(0,4,7,-1,3))
+	10.9916946...
+
+Below and to the left:
+
+	>>> print(vspoolinverse(0,4,-3,0,3))
+	12.573395633...
+
+Above and to the left:
+This is an interesting case in that it shows that the top of the spool is an arbitrary measurement starting point.
+The length of the line not touching the spool is added, and the length of the line which would touch if wrapped around is subtracted.
+
+	>>> print(vspoolinverse(0,4,-1,9,3))
+	0.705574...
+
+end of tests.
