@@ -6,18 +6,18 @@ Python code for inverse and forward kinematics.
 
 ## Legend
 
-Points
+Points (brown)
 - `C` center of circle (spool)
 - `P` plotting point
 - `T` tangent point, line to circle
 
-Lengths
+Lengths (blue)
 - `r` radius of circle
 - `c` length of line in contact with circle
 - `s` length of line from tangent to point
 - `h` distance between plotting point and circle center
 
-Angles
+Angles (green)
 - `a` section of circle with line contact
 - `b` interior angle of right triangle
 - `n` part angle of `b` above horizontal
