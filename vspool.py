@@ -21,20 +21,10 @@ def vspoolinverse(Cx,Cy,Px,Py,r):
 	return cs
 
 def vspoolinversecc(Cx,Cy,Px,Py,r): # counter clockwise
-	# right triangle calculation to find tangent point
-	h = sqrt((Px - Cx) ** 2 + (Py - Cy) ** 2)
-	b = acos(r / h)
-	m = atan2(Py - Cy,Px - Cx)
-	Tx = Cx + r * cos(m - b) # note
-	Ty = Cy + r * sin(m - b) # note
-	# find length of arc
-	n = atan2(Ty - Cy, Tx - Cx) % (2 * pi) # full positive range, no negative
-	a = n - pi / 2 # note
-	c = a * r
-	# find length of straight line
-	s = sqrt((Px - Tx) ** 2 + (Py - Ty) ** 2)
-	cs = c + s
-	return cs
+	# instead of counter clockwise calculation, 
+	# simply vertical mirror plot point from center of circle
+	# to get the counter clockwise length
+	return vspoolinverse(Cx,Cy,2 * Cx - Px,Py,r)
 
 def main():
 	print('V Spool Kinematics')
