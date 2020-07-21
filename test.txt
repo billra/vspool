@@ -42,4 +42,70 @@ The length of the line not touching the spool is added, and the length of the li
 	>>> print(vspoolinversecc(0,4,-1,9,3))
 	1.889947732...
 
+All quandrants test series, verified with Rhino
+
+Test #4:
+
+	>>> print(vspoolinverse(1,3,2,6,2))
+	1.3208366...
+
+	>>> print(vspoolinversecc(1,3,2,6,2))
+	0.0338343864...
+
+Test #5:
+
+	>>> print(vspoolinverse(1,3,4,4,2))
+	3.175427...
+
+	>>> print(vspoolinversecc(1,3,4,4,2))
+	10.74561456476...
+
+Test #6:
+
+	>>> print(vspoolinverse(1,3,4,2,2))
+	4.462429257581...
+
+	>>> print(vspoolinversecc(1,3,4,2,2))
+	9.458612347174...
+
+Test #7:
+
+	>>> print(vspoolinverse(1,3,2,0,2))
+	6.31701969...
+
+	>>> print(vspoolinversecc(1,3,2,0,2))
+	7.604021911...
+
+Test #8: (------- Note! expected values mirror along this line -------)
+
+	>>> print(vspoolinverse(1,3,0,0,2))
+	7.604021911...
+
+	>>> print(vspoolinversecc(1,3,0,0,2))
+	6.31701969...
+
+Test #9:
+
+	>>> print(vspoolinverse(1,3,-2,2,2))
+	9.458612347174...
+
+	>>> print(vspoolinversecc(1,3,-2,2,2))
+	4.462429257581...
+
+Test #10:
+
+	>>> print(vspoolinverse(1,3,-2,4,2))
+	10.74561456476...
+
+	>>> print(vspoolinversecc(1,3,-2,4,2))
+	3.175427...
+
+Test #11:
+
+	>>> print(vspoolinverse(1,3,0,6,2))
+	0.0338343864...
+
+	>>> print(vspoolinversecc(1,3,0,6,2))
+	1.3208366...
+
 end of tests.
