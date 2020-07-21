@@ -21,6 +21,9 @@ The same, but abbreviated:
 	>>> print(vspoolinverse(0,4,7,-1,3))
 	10.9916946...
 
+	>>> print(vspoolinversecc(0,4,7,-1,3))
+	16.694975679575...
+
 Below and to the left:
 
 	>>> print(vspoolinverse(0,4,-3,0,3))
