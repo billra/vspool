@@ -39,9 +39,7 @@ The length of the line not touching the spool is added, and the length of the li
 	>>> print(vspoolinverse(0,4,-1,9,3))
 	0.705574...
 
-Unlike the above, the line wraps all the way around before lifting
-
 	>>> print(vspoolinversecc(0,4,-1,9,3))
-	20.7395036536...
+	1.889947732...
 
 end of tests.

@@ -28,8 +28,8 @@ def vspoolinversecc(Cx,Cy,Px,Py,r): # counter clockwise
 	Tx = Cx + r * cos(m - b) # note
 	Ty = Cy + r * sin(m - b) # note
 	# find length of arc
-	n = atan2(Ty - Cy, Tx - Cx)
-	a = pi*1.5 + n # note
+	n = atan2(Ty - Cy, Tx - Cx) % (2 * pi) # full positive range, no negative
+	a = n - pi / 2 # note
 	c = a * r
 	# find length of straight line
 	s = sqrt((Px - Tx) ** 2 + (Py - Ty) ** 2)
