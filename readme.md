@@ -47,3 +47,23 @@ arbitrary line length measurement starting point.
 The effect of the calculation is as if the length of the line
 not touching the spool is added, and the length of the line which
 would touch if wrapped around is subtracted.
+
+### All Quadrants
+
+Full circle test. Clockwise and counter clockwise unspooling with
+at least two test points per quadrant.
+
+![testsdiagram2](allquadrantstest.PNG "Another Test Diagram")
+
+See test.txt file for exact values.
+
+Negative length values can be provoked with points closer
+to the surface near the top of the cylinder. Not sure I want
+to do anything about this as:
+1. Plot points will be generally be much further away from the 
+cylinder than any of these test cases, thus never provoking a 
+negative length value.
+2. Lines will be sloping down from the cylinder in real life, upward
+sloping lines to plot points were included to stress the limits of the 
+calculation.
+
