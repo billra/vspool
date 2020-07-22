@@ -29,6 +29,15 @@ Length of line is measured from the top of the spool, consisting
 of sections `c` in contact with the spool, and section `s` running
 to point `P`.
 
+Measuring the start of the line length from the top of the spool
+is arbitrary. It is a convienient reference point when calculating
+the linear distance equivalent of a stepper motor's rotation step.
+
+Diagram above shows line being spooled out in a
+clockwise rotation. This configuration is normally used on the left
+side of a v plotter. Code calculates both clockwise and counter clockwise
+unspooling. 
+
 Inverse kinematic calculation: given point to plot `P` find length
 of line.
 
@@ -37,7 +46,7 @@ plotting point `P`.
 
 ## Tests
 
-Diagram of test cases in test.txt. Values in the test are in
+Diagram of the first few test cases in test.txt. Values in the test are in
 agreement with 'Analyze, Length' measurements in the Rhino.
 
 ![testsdiagram](tests.PNG "Tests Diagram")
