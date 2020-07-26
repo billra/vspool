@@ -76,3 +76,30 @@ negative length value.
 sloping lines to plot points were included to stress the limits of the 
 calculation.
 
+## Forward Calculation
+
+Given the lengths of the control lines, calculate the resulting
+x,y plot value.
+
+![forwardkinematics](spoolforward.PNG "Forward Kinematics diagram")
+
+### Legend
+
+Points
+- `cx,cy` center of circle (spool)
+- `x,y` plotting point
+- `tx,ty` tangent point, line to circle
+
+Lengths
+- `r` radius of circle
+- `c` length of line in contact with circle
+- `s` length of line from tangent to point
+- c + s (green) is length of control line
+
+Angles
+- `a` section of circle with line contact
+- `n` angle from `cx,cy` to `tx,ty`
+
+Spiral curve (blue) is the path traced out by the end of the control
+line when the control line is wrapped around the spool. The control
+line stays the same length (c+s) as the spool is not rotated.
