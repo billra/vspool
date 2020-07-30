@@ -3,6 +3,7 @@
 # version 0.1
 from math import sqrt, acos, atan2, sin, cos, pi
 
+# inverse calculation: from plot points x,y find control line length
 def vspoolinverse(Cx,Cy,Px,Py,r):
 	# right triangle calculation to find tangent point
 	h = sqrt((Px - Cx) ** 2 + (Py - Cy) ** 2)
@@ -21,10 +22,37 @@ def vspoolinverse(Cx,Cy,Px,Py,r):
 	return cs
 
 def vspoolinversecc(Cx,Cy,Px,Py,r): # counter clockwise
-	# instead of counter clockwise calculation, 
-	# simply vertical mirror plot point from center of circle
-	# to get the counter clockwise length
+	# instead of counter clockwise calculation,
+    # simply vertical mirror plot point from center of circle
+    # to get the counter clockwise length
 	return vspoolinverse(Cx,Cy,2 * Cx - Px,Py,r)
+
+# forward calculation: from control line length and angle find plot point
+# note: intermediate calculation, actual forward calculation is from two
+# control line lengths
+
+def vspoolforward(cx,cy,r,cs,n):
+	# find tangent point
+	tx = cx + r * cos(n)
+	ty = cy + r * sin(n)
+	# find plot point
+	a = pi / 2 - n
+	c = a * r
+	s = cs - c
+	x = tx + s * cos(-a)
+	y = ty + s * sin(-a)
+	return x,y
+
+def vspoolforward_alt(cx,cy,r,cs,n): # another method to do same calcluation
+	a = pi / 2 - n
+	c = a * r
+	s = cs - c
+	b = atan2(s,r)
+	m = n - b
+	h = sqrt(r ** 2 + s ** 2)
+	x = cx + h * cos(m)
+	y = cy + h * sin(m)
+	return x,y
 
 def main():
 	print('V Spool Kinematics')
